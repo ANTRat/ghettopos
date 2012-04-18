@@ -1,0 +1,6 @@
+AuthName "GhettoPOS"
+AuthType Basic 
+AuthUserFile /var/www/sites/antrat.net/ghettopos/.htpasswd
+<Limit POST>
+ require valid-user
+</Limit>
