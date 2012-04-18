@@ -1,0 +1,14 @@
+GhettoPOS
+=
+
+Install Guide
+
+    $ cp db.php.example db.php
+    $ vim db.php
+    :%s/USERNAME/your_mysql_username/
+    :%s/PASSWORD/your_mysql_password/
+    :%s/EL_DATABASEO/your_mysql_database_name/
+    :wq
+    $ mysql -p your_mysql_database_name < sql.sql
+    $ htpasswd -c .htpasswd web_username
+    You expected a admin interface?
