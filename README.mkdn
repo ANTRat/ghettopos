@@ -11,4 +11,8 @@ Install Guide
     :wq
     $ mysql -p your_mysql_database_name < sql.sql
     $ htpasswd -c .htpasswd web_username
+    $ vim .htaccess
+      change AuthUserFile path
+    :wq
+
     You expected a admin interface?
