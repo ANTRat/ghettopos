@@ -26,13 +26,13 @@ switch ($_GET['cmd']) {
     break;
   case 'submit':
     if ( !isset($_SERVER["REMOTE_USER"]) ) {die('NOPE.avi');}
-	$order = array();
-	foreach ($_POST['order'] as $id=>$cnt) {
-	  if (is_numeric($id) != TRUE) { die('bad data!');}
-	  if ($cnt > 0) {
-		$q = "INSERT INTO orders (`user`,`item`,`quantity`) VALUES ('".mysql_real_escape_string($_SERVER['REMOTE_USER'])."',".mysql_real_escape_string($id).",".mysql_real_escape_string($cnt).")";
+    $order = array();
+   	foreach ($_POST['order'] as $id=>$cnt) {
+      if (is_numeric($id) != TRUE) { die('bad data!');}
+      if ($cnt > 0) {
+  	    $q = "INSERT INTO orders (`user`,`item`,`quantity`,`price`) VALUES ('".mysql_real_escape_string($_SERVER['REMOTE_USER'])."',".mysql_real_escape_string($id).",".mysql_real_escape_string($cnt).",".mysql_real_escape_string($_POST['inv'][$id]['price']).")";
         mysql_query($q) or die(mysql_error());
-	  }
+	    }
 	}
     break;
 }

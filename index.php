@@ -4,8 +4,8 @@
 <script src="jquery-1.7.2.min.js"></script>
 <script src="ghettopos.js"></script>
 <style>
-#inv { background-color: lime; }
-#order {background-color: cyan; }
+#inv { background-color: white; }
+#order {background-color: white; }
 </style>
 </head>
 <body>
